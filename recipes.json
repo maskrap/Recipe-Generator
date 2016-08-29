@@ -1,0 +1,37 @@
+{ "recipes": [{
+  "name": "Bruschetta",
+  "cuisine": "European",
+  "dish": "Cold",
+  "time": "20",
+  "serves": "8",
+  "ingredients": ""
+}, {
+  "name": "Perogies",
+  "cuisine": "European",
+  "dish": "Hot",
+  "time": "30",
+  "serves": "4-6",
+  "ingredients": ""
+}, {
+  "name": "Bean Sprouts with Tofu",
+  "cuisine": "Asian",
+  "dish": "Hot",
+  "time": "10",
+  "serves": "2",
+  "ingredients": ""
+}, {
+  "name": "Candied Sweet Potatoes",
+  "cuisine": "Asian",
+  "dish": "Hot",
+  "time": "30",
+  "serves": "3",
+  "ingredients": ""
+}, {
+  "name": "Bruschetta",
+  "cuisine": "European",
+  "dish": "cold",
+  "time": "20",
+  "serves": "8",
+  "ingredients": ""
+  }]
+}

@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyCDs3IAwGLSD6uomROYBEaPIxTrNgfNKe8",
+       authDomain: "recipe-generator.firebaseapp.com",
+       databaseURL: "https://recipe-generator.firebaseio.com",
+       storageBucket: "recipe-generator.appspot.com",
+    },
+    
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
