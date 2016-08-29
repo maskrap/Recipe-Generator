@@ -6,6 +6,7 @@ export default DS.Model.extend({
   dish: DS.attr(),
   time: DS.attr(),
   serves: DS.attr(),
+  image: DS.attr(),
   ingredients: DS.attr(), //HAS MANY?
   instructions: DS.attr(), //HAS MANY?
   comments: DS.hasMany('comment', { async: true })
