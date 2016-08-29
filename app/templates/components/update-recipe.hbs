@@ -1,5 +1,6 @@
-{{#if addNewRecipe}}
-  <h1>New Recipe</h1>
+{{#if showUpdateForm}}
+  <h4>Update Recipe: {{recipe.name}}</h4>
+
   <div>
     <form>
       <div class="form-group">
@@ -46,5 +47,5 @@
     </form>
   </div>
 {{else}}
-  <button {{action 'recipeFormShow'}}>New Recipe</button>
+  <button {{action 'showUpdateForm'}}>Update Recipe</button>
 {{/if}}

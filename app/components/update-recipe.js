@@ -1,14 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewRecipe: false,
+  showUpdateForm: false,
   actions: {
-    recipeFormShow() {
-      this.set('addNewRecipe', true);
+    showUpdateForm() {
+      this.set('showUpdateForm', true);
     },
-
-
-    save() {
+    update(recipe) {
       var params = {
         name: this.get('name')? this.get('name') : "",
         cuisine: this.get('cuisine')? this.get('cuisine') : "",
@@ -19,8 +17,8 @@ export default Ember.Component.extend({
         ingredients: this.get('ingredients')? this.get('ingredients') : "",
         instructions: this.get('ingredients')? this.get('ingredients') : "",
       };
-      this.set('addNewRecipe', false);
-      this.sendAction('save', params);
+      this.set('showUpdateForm', false);
+      this.sendAction('update', recipe, params);
     }
   }
 });
