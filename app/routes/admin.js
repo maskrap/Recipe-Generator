@@ -4,6 +4,9 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('recipe');
   },
+
+  addNewRecipe: false,
+
   actions: {
     save(params) {
       var newRecipe = this.store.createRecord('recipe', params);
@@ -11,15 +14,14 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
 
-    update(recipe, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          recipe.set(key,params[key]);
-        }
-      });
-      recipe.save();
-      this.transitionTo('admin');
+    recipeFormShow() {
+      this.set('addNewRecipe', true);
     },
+
+    update(recipe, params) {
+      this.sendAction('update', recipe, params);
+    },
+
 
     destroyRecipe(recipe) {
       recipe.destroyRecord();

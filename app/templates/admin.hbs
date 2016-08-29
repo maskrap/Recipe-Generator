@@ -1,5 +1,56 @@
+
+{{#if addNewRecipe}}
+  <h1>New Recipe</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      {{input value=name id="name"}}
+    </div>
+
+    <div class="form-group">
+      <label for="cuisine">Cuisine</label>
+      {{input value=cuisine id="cuisine"}}
+    </div>
+
+    <div class="form-group">
+      <label for="dish">Dish</label>
+      {{input value=dish id="dish"}}
+    </div>
+
+    <div class="form-group">
+      <label for="time">Time</label>
+      {{input value=time id="time"}}
+    </div>
+
+    <div class="form-group">
+      <label for="serves">Serves</label>
+      {{input value=serves id="serves"}}
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image</label>
+      {{input value=image id="image"}}
+    </div>
+
+    <div class="form-group">
+      <label for="ingredients">Ingredients</label>
+      {{input value=ingredients id="ingredients"}}
+    </div>
+
+    <div class="form-group">
+      <label for="instructions">Instructions</label>
+      {{input value=instructions id="instructions"}}
+    </div>
+
+    <button {{action 'save'}}>Save</button>
+  </form>
+  {{else}}
+  <button {{action 'recipeFormShow'}}>Add New Recipe</button>
+  {{/if}}
+
 <div>
   {{#each model as |recipe|}}
     {{admin-tile recipe=recipe update="update" destroyRecipe="destroyRecipe"}}
   {{/each}}
+
 </div>
