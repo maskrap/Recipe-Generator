@@ -7,6 +7,6 @@ export default DS.Model.extend({
   time: DS.attr(),
   serves: DS.attr(),
   ingredients: DS.attr(), //HAS MANY?
-  instructions: DS.attr() //HAS MANY?
+  instructions: DS.attr(), //HAS MANY?
   comments: DS.hasMany('comment', { async: true })
 });
