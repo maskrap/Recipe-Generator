@@ -4,34 +4,39 @@
   "dish": "Cold",
   "time": "20",
   "serves": "8",
-  "ingredients": ""
+  "ingredients": "",
+  "instructions": ""
 }, {
   "name": "Perogies",
   "cuisine": "European",
   "dish": "Hot",
   "time": "30",
   "serves": "4-6",
-  "ingredients": ""
+  "ingredients": "",
+  "instructions": ""
 }, {
   "name": "Bean Sprouts with Tofu",
   "cuisine": "Asian",
   "dish": "Hot",
   "time": "10",
   "serves": "2",
-  "ingredients": ""
+  "ingredients": "",
+  "instructions": ""
 }, {
   "name": "Candied Sweet Potatoes",
   "cuisine": "Asian",
   "dish": "Hot",
   "time": "30",
   "serves": "3",
-  "ingredients": ""
+  "ingredients": "",
+  "instructions": ""
 }, {
   "name": "Guacamole",
   "cuisine": "Latin",
   "dish": "Cold",
   "time": "20",
   "serves": "8",
-  "ingredients": ""
+  "ingredients": "",
+  "instructions": ""
   }]
 }

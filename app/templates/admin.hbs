@@ -1,1 +1,5 @@
-{{outlet}}
+<div>
+  {{#each model as |recipe|}}
+    {{admin-tile recipe=recipe update="update" destroyRecipe="destroyRecipe"}}
+  {{/each}}
+</div>
