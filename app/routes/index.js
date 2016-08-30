@@ -1,7 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('recipe');
+  actions: {
+    generate(cuisine, temperature) {
+      var params = cuisine + ', ' + temperature;
+      this.transitionTo('result', params);
+    }
   }
 });

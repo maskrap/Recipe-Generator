@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('admin');
   this.route('recipe');
+  this.route('result', {path: '/result/:cuisine'});
 });
 
 export default Router;

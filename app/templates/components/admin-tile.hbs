@@ -1,9 +1,9 @@
 <h3>{{recipe.name}}</h3>
 <h5>{{recipe.cuisine}} | {{recipe.dish}}</h5>
 <h4>{{recipe.time}} min. | {{recipe.serves}} ppl.</h4>
-{{recipe.ingredients}}
-{{recipe.instructions}}
 <img src={{recipe.image}} alt={{recipe.name}} class="admin-recipe"/>
+<h5>{{recipe.ingredients}}</h5>
+<h5>{{recipe.instructions}}</h5>
 {{update-recipe recipe=recipe update="update"}}
   <button {{action 'delete' recipe}}>Delete</button>
 <!-- <div>
