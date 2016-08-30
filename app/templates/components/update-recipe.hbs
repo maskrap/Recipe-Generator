@@ -1,5 +1,6 @@
 {{#if showUpdateForm}}
-  <h4>Update Recipe: {{recipe.name}}</h4>
+<div class="recipe-update-form">
+  <h4><span class="recipe-item-type">Update Recipe:</span> {{recipe.name}}</h4>
 
   <div>
     <form>
@@ -43,9 +44,10 @@
         {{input value=recipe.instructions id="instructions" placeholder=recipe.instructions}}
       </div>
 
-      <button {{action 'update' recipe}}>Save</button>
     </form>
   </div>
+</div>
+<button {{action 'update' recipe}} class="btn-save">Save</button>
 {{else}}
   <button {{action 'showUpdateForm'}} class="btn-update">Update Recipe</button>
 {{/if}}
