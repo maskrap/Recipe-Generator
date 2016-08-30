@@ -8,6 +8,7 @@ export default Ember.Route.extend({
   actions: {
     save(params) {
       var newRecipe = this.store.createRecord('recipe', params);
+      newRecipe.save();
       this.transitionTo('admin');
     },
 
