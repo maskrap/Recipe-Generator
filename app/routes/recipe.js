@@ -1,13 +1,9 @@
-import config from '../config/environment';
 import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(params) {
-   var key = config.myApiKey;
-   var url = 'http://www.supermarketapi.com/api.asmx/COMMERCIAL_SearchByProductName?APIKEY=' +key+ '&ItemName=' + params;
-   return Ember.$.getJSON(url).then(function(responseJSON) {
-     return responseJSON.results;
-   });
+    return this.store.findRecord('recipe', params.recipe_id);
+  },
   favoritesList: Ember.inject.service(),
   actions: {
     remove(recipe) {

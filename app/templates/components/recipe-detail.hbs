@@ -3,7 +3,11 @@
 <h5>{{recipe.cuisine}} | {{recipe.dish}}</h5>
 <h4>{{recipe.time}} min. | {{recipe.serves}} ppl.</h4>
 <img src={{recipe.image}} alt={{recipe.name}} class="admin-recipe"/>
-<h5>{{recipe.ingredients}}</h5>
+<ul>
+  {{#each ingredients as |ingredient|}}
+    {{ingredient-list ingredient=ingredient}}
+  {{/each}}
+</ul>
 <h5>{{recipe.instructions}}</h5>
 
 
