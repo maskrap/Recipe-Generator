@@ -8,5 +8,16 @@ export default Ember.Route.extend({
    return Ember.$.getJSON(url).then(function(responseJSON) {
      return responseJSON.results;
    });
+  favoritesList: Ember.inject.service(),
+  actions: {
+    remove(recipe) {
+      this.get('favoritesList').remove(recipe);
+    },
+    empty(recipe) {
+      this.get('favoritesList').empty(recipe);
+    },
+    addToFav(recipe) {
+      this.get('favoritesList').add(recipe);
+    },
   }
 });
