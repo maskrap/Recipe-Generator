@@ -1,11 +1,30 @@
-<h3>{{recipe.name}}</h3>
-<h5>{{recipe.cuisine}} | {{recipe.dish}}</h5>
-<h4>{{recipe.time}} min. | {{recipe.serves}} ppl.</h4>
-<img src={{recipe.image}} alt={{recipe.name}} class="admin-recipe"/>
-<h5>{{recipe.ingredients}}</h5>
-<h5>{{recipe.instructions}}</h5>
-{{update-recipe recipe=recipe update="update"}}
-  <button {{action 'delete' recipe}}>Delete</button>
+<div class="admin-tile">
+  <div class="admin-tile-img-info-buttons">
+    <div class="admin-tile-img-delete-button">
+      <div class="admin-tile-img">
+        <img src={{recipe.image}} alt={{recipe.name}} class="admin-recipe"/>
+      </div>
+      <div class="admin-tile-button-delete">
+        <button {{action 'delete' recipe}} class="btn-delete">Delete</button>
+      </div>
+    </div>
+    <div class="admin-tile-info-update-button">
+      <div class="admin-tile-info">
+        <h3>{{recipe.name}}</h3>
+        <h4><span class="recipe-item-type">cuisine:</span> {{recipe.cuisine}}</h4>
+        <h4><span class="recipe-item-type">temp:</span> {{recipe.dish}}</h4>
+        <h4><span class="recipe-item-type">time:</span> {{recipe.time}} <span class="recipe-item-type-count">minutes</span></h4>
+        <h4><span class="recipe-item-type">serves:</span> {{recipe.serves}} <span class="recipe-item-type-count">people</span></h4>
+        <h4><span class="recipe-item-type">ingredients:</span> {{recipe.ingredients}}</h4>
+        <h4><span class="recipe-item-type">instructions:</span> {{recipe.instructions}}</h4>
+      </div>
+      <div class="admin-tile-button-update">
+        {{update-recipe recipe=recipe update="update"}}
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- <div>
   <h3>{{recipe.name}}</h3>
   <h5>{{recipe.cuisine}} | {{recipe.dish}}</h5>
