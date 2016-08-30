@@ -1,4 +1,4 @@
-{{recipe.name}}
+{{#link-to 'recipe' recipe.id}}{{recipe.name}}{{/link-to}}
 {{recipe.dish}}
 {{recipe.cuisine}}
-<img src={{recipe.image}} alt={{recipe.name}} />
+{{#link-to 'recipe' recipe.id}}<img src={{recipe.image}} alt={{recipe.name}}/>{{/link-to}}

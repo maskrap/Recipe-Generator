@@ -8,5 +8,5 @@ export default Ember.Route.extend({
      return Ember.$.getJSON(url).then(function(responseJSON) {
        return responseJSON.results;
      });
-   }
- });
+  }
+});
