@@ -1,0 +1,36 @@
+{{#if getStarted}}
+  <button {{action 'start'}}>Appetize Me!</button>
+{{else}}
+  <form class="">
+    {{#if stepOne}}
+      <p>What type of cuisine are you looking for?</p>
+      {{#power-select
+        selected=defaultCuisine
+        options=cuisines
+        onchange=(action "chooseCuisine")
+        as |cuisine|}}
+        {{cuisine}}
+      {{/power-select}}
+      <button {{action 'stepOne'}}>Next</button>
+    {{/if}}
+    {{#if stepTwo}}
+      <p>Do you prefer hot or cold appetizers?</p>
+      {{#power-select
+        selected=defaultTemperature
+        options=temperatures
+        onchange=(action "chooseTemperature")
+        as |temperature|}}
+        {{temperature}}
+      {{/power-select}}
+      <button {{action 'stepTwo'}}>Next</button>
+    {{/if}}
+    {{#if confirmation}}
+      <p>Your Appetizer Preferences:</p>
+      <ul>
+        <li>{{defaultCuisine}}</li>
+        <li>{{defaultTemperature}}</li>
+      </ul>
+      <button {{action 'generate'}}>Show me the recipes!</button>
+    {{/if}}
+  </form>
+{{/if}}

@@ -1,10 +1,3 @@
-<div>
-  {{new-recipe save="save"}}
-  <div>
-    <h3>Recipes:</h3>
-    {{#each model as |recipe|}}
-      {{recipe-tile recipe=recipe}}
-      <hr>
-    {{/each}}
-  </div>
+<div class="container">
+  {{generate-form generate='generate'}}
 </div>
