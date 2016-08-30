@@ -17,7 +17,6 @@ export default Ember.Component.extend({
         ingredients: this.get('ingredients'),
         instructions: this.get('instructions'),
       };
-      console.log(params);
       this.set('showUpdateForm', false);
       this.sendAction('update', recipe, params);
     }
