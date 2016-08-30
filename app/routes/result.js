@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  favoritesList: Ember.inject.service(),
 
   model: function(params) {
     console.log(params.cuisine);
