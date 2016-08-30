@@ -5,42 +5,42 @@
     <form>
       <div class="form-group">
         <label for="name">Name</label>
-        {{input value=name id="name" placeholder=recipe.name}}
+        {{input value=recipe.name id="name" placeholder=recipe.name}}
       </div>
 
       <div class="form-group">
         <label for="cuisine">Cuisine</label>
-        {{input value=cuisine id="cuisine" placeholder=recipe.cuisine}}
+        {{input value=recipe.cuisine id="cuisine" placeholder=recipe.cuisine}}
       </div>
 
       <div class="form-group">
         <label for="dish">Dish</label>
-        {{input value=dish id="dish" placeholder=recipe.dish}}
+        {{input value=recipe.dish id="dish" placeholder=recipe.dish}}
       </div>
 
       <div class="form-group">
         <label for="time">Time</label>
-        {{input value=time id="time" placeholder=recipe.time}}
+        {{input value=recipe.time id="time" placeholder=recipe.time}}
       </div>
 
       <div class="form-group">
         <label for="serves">Serves</label>
-        {{input value=serves id="serves" placeholder=recipe.serves}}
+        {{input value=recipe.serves id="serves" placeholder=recipe.serves}}
       </div>
 
       <div class="form-group">
         <label for="image">Image</label>
-        {{input value=image id="image" placeholder=recipe.image}}
+        {{input value=recipe.image id="image" placeholder=recipe.image}}
       </div>
 
       <div class="form-group">
         <label for="ingredients">Ingredients</label>
-        {{input value=ingredients id="ingredients" placeholder=recipe.ingredients}}
+        {{input value=recipe.ingredients id="ingredients" placeholder=recipe.ingredients}}
       </div>
 
       <div class="form-group">
         <label for="instructions">Instructions</label>
-        {{input value=instructions id="instructions" placeholder=recipe.instructions}}
+        {{input value=recipe.instructions id="instructions" placeholder=recipe.instructions}}
       </div>
 
       <button {{action 'update' recipe}}>Save</button>
