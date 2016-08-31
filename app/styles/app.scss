@@ -2,15 +2,55 @@
 @import "scss/normalize";
 @import "scss/base";
 
+body {
+  background-color: #D6EDFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .page-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .header-nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 5em;
+      background-color: #48BEFF;
+      img.logo-img {
+        width: 3em;
+        height: auto;
+        margin-left: 5vw;
+      }
+    }
+  }
+  .footer {
+    height: 10em;
+    background-color: #044389;
+  }
+}
+
+
+// ====== H E A D E R + F O O T E R ======
+
+
+
+// ====== R E C I P E  T I L E ======
 .recipe-results {
   display: flex;
   flex-direction: column;
   width: 90vw;
   margin: 2vh auto 0 auto;
   .recipe-results-title-tile {
+    border-bottom: 1px solid #044389;
+    margin-bottom: 2vh;
     h3 {
-      color: darkgray;
-      margin-bottom: 2vh;
+      color: #044389;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25vh;
     }
   }
   .recipe-results-recipes-tile {
@@ -33,12 +73,12 @@
     display: flex;
     align-items: center;
     padding: 0 1em;
-    background-color: #D8D8D8;
+    background-color: #48BEFF;
     height: 3em;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     h2 {
-      color: #494947;
+      color: #044389;
       font-weight: lighter;
       font-size: 1.3em;
     }
@@ -108,7 +148,11 @@ img.recipe-tile-img {
   height: auto;
 }
 
-// ================== A D M I N  T I L E ==================
+// ====== A D M I N  T I L E ======
+.admin {
+  margin-bottom: 30px;
+}
+
 .admin-tile {
   display: flex;
   width: 100vw;
@@ -250,6 +294,8 @@ img.recipe-tile-img {
     }
   }
 }
+
+// ====== M E D I A  Q U I R I E S ======
 
 @media only screen and (max-width: 950px) {
 

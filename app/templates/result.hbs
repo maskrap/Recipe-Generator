@@ -1,10 +1,18 @@
-<div class="recipe-results">
-  <div class="recipe-results-title-tile">
-    <h3>Recipes:</h3>
+<div class="page-wrap">
+  <div class="header-nav">
+    {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
   </div>
-  <div class="recipe-results-recipes-tile">
-    {{#each model as |recipe|}}
+  <div class="recipe-results">
+    <div class="recipe-results-title-tile">
+      <h3>Recipes</h3>
+    </div>
+    <div class="recipe-results-recipes-tile">
+      {{#each model as |recipe|}}
       {{recipe-tile recipe=recipe}}
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
+</div>
+<div class="footer">
+
 </div>

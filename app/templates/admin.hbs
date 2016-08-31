@@ -1,4 +1,14 @@
-{{#each model as |recipe|}}
-  {{admin-tile recipe=recipe update="update" destroyRecipe="destroyRecipe"}}
-{{/each}}
-{{new-recipe save="save"}}
+<div class="page-wrap">
+  <div class="header-nav">
+    {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+  </div>
+  <div class="admin">
+    {{#each model as |recipe|}}
+      {{admin-tile recipe=recipe update="update" destroyRecipe="destroyRecipe"}}
+    {{/each}}
+    {{new-recipe save="save"}}
+  </div>
+</div>
+<div class="footer">
+
+</div>
