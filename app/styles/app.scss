@@ -24,8 +24,10 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 28vw;
+  margin: 1vh 1vw;
   a{
     text-decoration: none;
+    margin: 0;
   }
   .recipe-tile-title-tile {
     display: flex;
@@ -43,39 +45,59 @@
   }
   .recipe-tile-img-tile {
     position: relative;
+    height: calc(100vw/3.7);
+    background-color: #D8D8D8;
     .recipe-tile-img-tile-info {
       position: absolute;
       top: 0.8em;
       left: 1em;
+      .recipe-tile-img-tile-info-tile {
+        display: flex;
+        align-items: center;
+        h6 {
+          color: #FFFFFF;
+          font-size: 1em;
+          text-shadow: 2px 2px 5px #000000;
+          span.recipe-tile-img-tile-info-span {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            font-weight: lighter;
+          }
+          i {
+            margin: 0 8px 5px 0;
+            text-shadow: 1.25px 1.25px 3px #000000;
+          }
+        }
+      }
     }
   }
   .recipe-tile-social-tile {
     display: flex;
     height: 3em;
-    .buttons-social-facebook {
-      width: 33.3%;
+    margin: 0;
+    z-index: 10000;
+    .buttons-social {
       height: 100%;
-      background-color: #3B5998;
       display: flex;
       justify-content: center;
       align-items: center;
+      i {
+        font-size: 1.5em;
+        color: #FFFFFF;
+      }
+    }
+    .facebook {
+      width: 33.3%;
+      background-color: #3B5998;
       border-bottom-left-radius: 1em;
     }
-    .buttons-social-twitter {
+    .twitter {
       width: 33.4%;
-      height: 100%;
       background-color: #4099FF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-    .buttons-social-pinterest {
+    .pinterest {
       width: 33.3%;
-      height: 100%;
       background-color: #C92228;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       border-bottom-right-radius: 1em;
     }
   }
@@ -229,7 +251,27 @@ img.recipe-tile-img {
   }
 }
 
+@media only screen and (max-width: 950px) {
+
+  .recipe-tile {
+    .recipe-tile-title-tile {
+      h2 {
+        font-size: 1em;
+      }
+    }
+  }
+
+}
+
 @media only screen and (max-width: 800px) {
+
+  .recipe-tile {
+    .recipe-tile-title-tile {
+      h2 {
+        font-size: 0.8em;
+      }
+    }
+  }
 
   .admin-tile {
     display: flex;
@@ -281,6 +323,18 @@ img.recipe-tile-img {
       }
       button.btn-save {
         border-bottom-left-radius: 0.8em;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .recipe-tile {
+    .recipe-tile-title-tile {
+      h2 {
+        font-size: 0.5em;
       }
     }
   }
