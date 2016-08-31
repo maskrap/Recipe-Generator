@@ -1,4 +1,27 @@
-{{#link-to 'recipe' recipe.id}}{{recipe.name}}{{/link-to}}
-{{recipe.dish}}
-{{recipe.cuisine}}
-{{#link-to 'recipe' recipe.id}}<img src={{recipe.image}} alt={{recipe.name}}/>{{/link-to}}
+<div class="recipe-tile">
+  {{#link-to 'recipe' recipe.id}}<div class="recipe-tile-title-tile">
+    <h2>{{recipe.name}}</h2>
+  </div>
+  <div class="recipe-tile-img-tile">
+    {{#link-to 'recipe' recipe.id}}<img src={{recipe.image}} alt={{recipe.name}} class="recipe-tile-img"/>{{/link-to}}
+    <div class="recipe-tile-img-tile-info">
+      <div class="recipe-tile-img-tile-info-tile">
+        <h6><i class="fa fa-globe" aria-hidden="true"></i></h6>
+        <h6><span class="recipe-tile-img-tile-info-span">{{recipe.cuisine}}</span></h6>
+      </div>
+      <div class="recipe-tile-img-tile-info-tile">
+        <h6><i class="fa fa-sun-o" aria-hidden="true"></i></h6>
+        <h6><span class="recipe-tile-img-tile-info-span">{{recipe.dish}}</span></h6>
+      </div>
+      <div class="recipe-tile-img-tile-info-tile">
+        <h6><i class="fa fa-user" aria-hidden="true"></i></h6>
+        <h6><span class="recipe-tile-img-tile-info-span">{{recipe.serves}}</span></h6>
+      </div>
+    </div>
+  </div>{{/link-to}}
+  <div class="recipe-tile-social-tile">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4200" target="_blank" class="buttons-social facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://twitter.com/home?status=Find%20the%20best%20recipes%20with%20beer%20%2B%20wine%20pairings%20from%20the%20good%20folks%20over%20at%2030min%20Recipes%3A%20http%3A//localhost%3A4200%20%23eatwell%20%2330minRecipes" target="_blank" class="buttons-social twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=http%3A//localhost%3A4200&media=&description=OMG!%20These%20%23recipes%20are%20to%20die%20for.%20Pin%20them%20all!" target="_blank" class="buttons-social pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+  </div>
+</div>
