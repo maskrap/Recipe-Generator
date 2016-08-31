@@ -1,7 +1,10 @@
-<div>
-  <h3>Recipes:</h3>
-  {{#each model as |recipe|}}
-    {{recipe-tile recipe=recipe}}
-    <hr>
-  {{/each}}
+<div class="recipe-results">
+  <div class="recipe-results-title-tile">
+    <h3>Recipes:</h3>
+  </div>
+  <div class="recipe-results-recipes-tile">
+    {{#each model as |recipe|}}
+      {{recipe-tile recipe=recipe}}
+    {{/each}}
+  </div>
 </div>

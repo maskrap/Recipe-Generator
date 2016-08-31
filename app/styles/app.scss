@@ -2,6 +2,91 @@
 @import "scss/normalize";
 @import "scss/base";
 
+.recipe-results {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 2vh auto 0 auto;
+  .recipe-results-title-tile {
+    h3 {
+      color: darkgray;
+      margin-bottom: 2vh;
+    }
+  }
+  .recipe-results-recipes-tile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.recipe-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 28vw;
+  a{
+    text-decoration: none;
+  }
+  .recipe-tile-title-tile {
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    background-color: #D8D8D8;
+    height: 3em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    h2 {
+      color: #494947;
+      font-weight: lighter;
+      font-size: 1.3em;
+    }
+  }
+  .recipe-tile-img-tile {
+    position: relative;
+    .recipe-tile-img-tile-info {
+      position: absolute;
+      top: 0.8em;
+      left: 1em;
+    }
+  }
+  .recipe-tile-social-tile {
+    display: flex;
+    height: 3em;
+    .buttons-social-facebook {
+      width: 33.3%;
+      height: 100%;
+      background-color: #3B5998;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 1em;
+    }
+    .buttons-social-twitter {
+      width: 33.4%;
+      height: 100%;
+      background-color: #4099FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .buttons-social-pinterest {
+      width: 33.3%;
+      height: 100%;
+      background-color: #C92228;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-right-radius: 1em;
+    }
+  }
+}
+
+img.recipe-tile-img {
+  width: 100%;
+  height: auto;
+}
+
+// ================== A D M I N  T I L E ==================
 .admin-tile {
   display: flex;
   width: 100vw;

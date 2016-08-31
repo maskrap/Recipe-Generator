@@ -1,4 +1,17 @@
-{{#link-to 'recipe' recipe.id}}{{recipe.name}}{{/link-to}}
-{{recipe.dish}}
-{{recipe.cuisine}}
-{{#link-to 'recipe' recipe.id}}<img src={{recipe.image}} alt={{recipe.name}}/>{{/link-to}}
+<div class="recipe-tile">
+  {{#link-to 'recipe' recipe.id}}<div class="recipe-tile-title-tile">
+    <h2>{{recipe.name}}</h2>
+  </div>
+  <div class="recipe-tile-img-tile">
+    {{#link-to 'recipe' recipe.id}}<img src={{recipe.image}} alt={{recipe.name}} class="recipe-tile-img"/>{{/link-to}}
+    <div class="recipe-tile-img-tile-info">
+      <h6>{{recipe.dish}}</h6>
+      <h6>{{recipe.cuisine}}</h6>
+    </div>
+  </div>{{/link-to}}
+  <div class="recipe-tile-social-tile">
+    <a href="#" class="buttons-social-facebook">f</a>
+    <a href="#" class="buttons-social-twitter">tw</a>
+    <a href="#" class="buttons-social-pinterest">p</a>
+  </div>
+</div>
