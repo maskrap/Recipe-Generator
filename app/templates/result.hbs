@@ -1,7 +1,9 @@
 <div>
   <h3>Recipes:</h3>
   {{#each model as |recipe|}}
-    {{recipe-tile recipe=recipe}}
-    <hr>
+    {{#if (eq recipe.dish 'temperature')}}
+      {{recipe-tile recipe=recipe}}
+      <hr>
+    {{/if}}
   {{/each}}
 </div>
