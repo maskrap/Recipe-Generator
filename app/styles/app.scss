@@ -2,6 +2,157 @@
 @import "scss/normalize";
 @import "scss/base";
 
+body {
+  background-color: #D6EDFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .page-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .header-nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 5em;
+      background-color: #48BEFF;
+      img.logo-img {
+        width: 3em;
+        height: auto;
+        margin-left: 5vw;
+      }
+    }
+  }
+  .footer {
+    height: 10em;
+    background-color: #044389;
+  }
+}
+
+
+// ====== H E A D E R + F O O T E R ======
+
+
+
+// ====== R E C I P E  T I L E ======
+.recipe-results {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 2vh auto 0 auto;
+  .recipe-results-title-tile {
+    border-bottom: 1px solid #044389;
+    margin-bottom: 2vh;
+    h3 {
+      color: #044389;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25vh;
+    }
+  }
+  .recipe-results-recipes-tile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.recipe-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 28vw;
+  margin: 1vh 1vw;
+  a{
+    text-decoration: none;
+    margin: 0;
+  }
+  .recipe-tile-title-tile {
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    background-color: #48BEFF;
+    height: 3em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    h2 {
+      color: #044389;
+      font-weight: lighter;
+      font-size: 1.3em;
+    }
+  }
+  .recipe-tile-img-tile {
+    position: relative;
+    height: calc(100vw/3.7);
+    background-color: #D8D8D8;
+    .recipe-tile-img-tile-info {
+      position: absolute;
+      top: 0.8em;
+      left: 1em;
+      .recipe-tile-img-tile-info-tile {
+        display: flex;
+        align-items: center;
+        h6 {
+          color: #FFFFFF;
+          font-size: 1em;
+          text-shadow: 2px 2px 5px #000000;
+          span.recipe-tile-img-tile-info-span {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            font-weight: lighter;
+          }
+          i {
+            margin: 0 8px 5px 0;
+            text-shadow: 1.25px 1.25px 3px #000000;
+          }
+        }
+      }
+    }
+  }
+  .recipe-tile-social-tile {
+    display: flex;
+    height: 3em;
+    margin: 0;
+    z-index: 10000;
+    .buttons-social {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 1.5em;
+        color: #FFFFFF;
+      }
+    }
+    .facebook {
+      width: 33.3%;
+      background-color: #3B5998;
+      border-bottom-left-radius: 1em;
+    }
+    .twitter {
+      width: 33.4%;
+      background-color: #4099FF;
+    }
+    .pinterest {
+      width: 33.3%;
+      background-color: #C92228;
+      border-bottom-right-radius: 1em;
+    }
+  }
+}
+
+img.recipe-tile-img {
+  width: 100%;
+  height: auto;
+}
+
+// ====== A D M I N  T I L E ======
+.admin {
+  margin-bottom: 30px;
+}
+
 .admin-tile {
   display: flex;
   width: 100vw;
@@ -144,7 +295,29 @@
   }
 }
 
+// ====== M E D I A  Q U I R I E S ======
+
+@media only screen and (max-width: 950px) {
+
+  .recipe-tile {
+    .recipe-tile-title-tile {
+      h2 {
+        font-size: 1em;
+      }
+    }
+  }
+
+}
+
 @media only screen and (max-width: 800px) {
+
+  .recipe-tile {
+    .recipe-tile-title-tile {
+      h2 {
+        font-size: 0.8em;
+      }
+    }
+  }
 
   .admin-tile {
     display: flex;
@@ -196,6 +369,18 @@
       }
       button.btn-save {
         border-bottom-left-radius: 0.8em;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .recipe-tile {
+    .recipe-tile-title-tile {
+      h2 {
+        font-size: 0.5em;
       }
     }
   }
