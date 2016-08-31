@@ -7,8 +7,8 @@
       <h3>Recipes</h3>
     </div>
     <div class="recipe-results-recipes-tile">
-      {{#each model as |recipe|}}
-      {{#if (eq recipe.dish 'temperature')}}
+      {{#each model.recipes as |recipe|}}
+      {{#if (eq recipe.dish model.temperature)}}
         {{recipe-tile recipe=recipe}}
       {{/if}}
       {{/each}}
