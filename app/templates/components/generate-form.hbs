@@ -1,8 +1,10 @@
-{{#if getStarted}}
-  <button {{action 'start'}}>Appetize Me!</button>
-{{else}}
-  <form class="">
-    {{#if stepOne}}
+<div class="recipe-form-generator-tile">
+  <div class="appetize-me">
+    {{#if getStarted}}
+    <button {{action 'start'}} class="btn-recipe-form">Appetize Me!</button>
+    {{else}}
+    <form class="appetize-me-form">
+      {{#if stepOne}}
       <p>What type of cuisine are you looking for?</p>
       {{#power-select
         selected=defaultCuisine
@@ -10,27 +12,29 @@
         onchange=(action "chooseCuisine")
         as |cuisine|}}
         {{cuisine}}
-      {{/power-select}}
-      <button {{action 'stepOne'}}>Next</button>
-    {{/if}}
-    {{#if stepTwo}}
-      <p>Do you prefer hot or cold appetizers?</p>
-      {{#power-select
-        selected=defaultTemperature
-        options=temperatures
-        onchange=(action "chooseTemperature")
-        as |temperature|}}
-        {{temperature}}
-      {{/power-select}}
-      <button {{action 'stepTwo'}}>Next</button>
-    {{/if}}
-    {{#if confirmation}}
-      <p>Your Appetizer Preferences:</p>
-      <ul>
-        <li>{{defaultCuisine}}</li>
-        <li>{{defaultTemperature}}</li>
-      </ul>
-      <button {{action 'generate'}}>Show me the recipes!</button>
-    {{/if}}
-  </form>
-{{/if}}
+        {{/power-select}}
+        <button {{action 'stepOne'}} class="btn-recipe-form-next">Next</button>
+        {{/if}}
+        {{#if stepTwo}}
+        <p>Do you prefer hot or cold appetizers?</p>
+        {{#power-select
+          selected=defaultTemperature
+          options=temperatures
+          onchange=(action "chooseTemperature")
+          as |temperature|}}
+          {{temperature}}
+          {{/power-select}}
+          <button {{action 'stepTwo'}} class="btn-recipe-form-next">Next</button>
+          {{/if}}
+          {{#if confirmation}}
+          <p>Your recipe preferences are:</p>
+          <div class="recipe-prefs">
+            <h1><i class="fa fa-globe" aria-hidden="true"></i> {{defaultCuisine}}</h1>
+            <h1><i class="fa fa-sun-o" aria-hidden="true"></i> {{defaultTemperature}}</h1>
+          </div>
+          <button {{action 'generate'}} class="btn-recipe-form-next">Show me the recipes!</button>
+          {{/if}}
+        </form>
+        {{/if}}
+  </div>
+</div>
