@@ -1,10 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  actions: {
+actions: {
     generate(cuisine, temperature) {
       var params = cuisine + ', ' + temperature;
       this.transitionTo('result', params);
     }
-  }
+  },
+
 });
