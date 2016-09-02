@@ -9,10 +9,9 @@
     </div>
   </div>
   <div class="favorite-recipes">
-    <button {{action 'empty'}}>Empty list</button>
-    {{#each favoritesList.recipes as |recipe|}}
-    {{recipe-tile recipe=recipe}}
-    <button {{action 'remove' recipe}}>Remove Recipe</button>
-    {{/each}}
+    <div class="fav-recipes-tile">
+      <h3>Favorites List | <button {{action 'empty'}}>Empty list</button></h3>
+    </div>
+    {{display-list}}
   </div>
 </div>
