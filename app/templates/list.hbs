@@ -9,7 +9,10 @@
     </div>
   </div>
   <div class="favorite-recipes">
-    {{recipe-tile items=model}}
-    {{display-cart}}
+    <button {{action 'empty'}}>Empty list</button>
+    {{#each favoritesList.recipes as |recipe|}}
+    {{recipe-tile recipe=recipe}}
+    <button {{action 'remove' recipe}}>Remove Recipe</button>
+    {{/each}}
   </div>
 </div>

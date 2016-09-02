@@ -1,6 +1,7 @@
-<div class="empty-list">  
-  <button {{action 'empty'}}>Empty list</button>
+
+<div class="recipe-results-recipes-tile">
   {{#each favoritesList.recipes as |recipe|}}
-  <li>{{recipe.name}} -- {{recipe.cuisine}}</li><button {{action 'remove' recipe}}>Remove Recipe</button>
+    {{recipe-tile recipe=recipe}}
+    <button {{action 'remove' recipe}}>Remove Recipe</button>
   {{/each}}
 </div>

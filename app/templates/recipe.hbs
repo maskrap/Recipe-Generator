@@ -8,7 +8,8 @@
       {{#link-to 'admin'}}<h4>Admin</h4>{{/link-to}}
     </div>
   </div>
-  {{recipe-detail recipe=model}}
+  {{recipe-detail recipe=model addToFav="addToFav"}}
+  {{display-list}}
   <!-- {{display-list}} -->
   <div class="comments-display">
     <div class="comments-display-title">
