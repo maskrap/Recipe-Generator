@@ -15,8 +15,8 @@
         <h4><span class="recipe-item-type">temp:</span> {{recipe.dish}}</h4>
         <h4><span class="recipe-item-type">time:</span> {{recipe.time}} <span class="recipe-item-type-count">minutes</span></h4>
         <h4><span class="recipe-item-type">serves:</span> {{recipe.serves}} <span class="recipe-item-type-count">people</span></h4>
-        <h4><span class="recipe-item-type">ingredients:</span> {{recipe.ingredients}}</h4>
-        <h4><span class="recipe-item-type">instructions:</span> {{recipe.instructions}}</h4>
+        <h4><span class="recipe-item-type">ingredients:</span> <span class="small-instructions">{{recipe.ingredients}}</span></h4>
+        <h4><span class="recipe-item-type">instructions:</span> <span class="small-instructions">{{recipe.instructions}}</span></h4>
       </div>
       <div class="admin-tile-button-update">
         {{update-recipe recipe=recipe update="update"}}
