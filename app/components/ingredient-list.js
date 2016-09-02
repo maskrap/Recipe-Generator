@@ -13,12 +13,16 @@ export default Ember.Component.extend({
         var priceArray = [];
         for (var i = 0; i < prices.length; i ++) {
           var price = prices[i].childNodes[0].nodeValue;
-          priceArray.push(price);
+          if (price !== 'NOPRICE') {
+            priceArray.push(parseFloat(price).toFixed(2));
+          }
         }
         priceArray.sort(function(a, b) {
           return a-b;
         });
-        that.set('ingredientResult', parseFloat(priceArray[0]).toFixed(2));
+        if (priceArray) {
+          that.set('ingredientResult', priceArray[0]);
+        }
       });
     }
   })
