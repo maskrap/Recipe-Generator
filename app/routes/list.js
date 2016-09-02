@@ -5,4 +5,10 @@ export default Ember.Route.extend({
     return this.store.findAll('recipe');
   },
   favoritesList: Ember.inject.service(),
+  actions: {
+    reload(recipe) {
+      var recipe_id = recipe.id;
+      this.transitionTo('recipe', recipe_id);
+    }
+  }
 });

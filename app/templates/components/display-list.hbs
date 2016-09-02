@@ -1,7 +1,7 @@
 
 <div class="recipe-results-recipes-tile">
-  {{#each favoritesList.recipes as |recipe|}}
+  {{#each favoritesList.recipes as |recipe index|}}
     {{recipe-tile recipe=recipe}}
-    <button {{action 'remove' recipe}}>Remove Recipe</button>
+    <button {{action 'remove' recipe index}}>Remove Recipe</button>
   {{/each}}
 </div>
