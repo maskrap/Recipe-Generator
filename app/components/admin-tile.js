@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  favoritesList: Ember.inject.service(),
+
   actions: {
     update(recipe, params) {
       this.sendAction('update', recipe, params);

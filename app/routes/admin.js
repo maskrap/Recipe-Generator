@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('recipe');
   },
+  favoritesList: Ember.inject.service(),
 
   actions: {
     save(params) {

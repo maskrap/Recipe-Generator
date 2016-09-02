@@ -4,7 +4,7 @@
       {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
     </div>
     <div class="header-nav-favs">
-      {{#link-to 'list'}}<h4>Favorites</h4>{{/link-to}}
+      {{#link-to 'list'}}<h4>Favorites {{recipe-counter}} </h4>{{/link-to}}
       {{#link-to 'admin'}}<h4>Admin</h4>{{/link-to}}
     </div>
   </div>
@@ -21,3 +21,4 @@
     </div>
   </div>
 </div>
+{{recipe-counter recipe-model}}

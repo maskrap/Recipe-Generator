@@ -7,5 +7,6 @@ actions: {
       this.transitionTo('result', params);
     }
   },
+  favoritesList: Ember.inject.service(),
 
 });
