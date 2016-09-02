@@ -1,3 +1,6 @@
-{{recipe-tile items=model}}
+{{recipe-tile recipe=model}}
 {{#link-to 'list'}}<h3>Favorites List</h3>{{/link-to}}
-{{display-cart}}
+<button {{action 'empty'}}>Empty list</button>
+{{#each favoritesList.recipes as |recipe|}}
+  <li>{{recipe.name}} -- {{recipe.cuisine}}</li><button {{action 'remove' recipe}}>Remove Recipe</button>
+{{/each}}

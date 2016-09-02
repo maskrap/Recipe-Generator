@@ -5,4 +5,10 @@ export default Ember.Component.extend({
   ingredients: Ember.computed('recipe.ingredients', function(){
     return this.get('recipe.ingredients').split(', ');
   }),
+
+  actions: {
+  addToFav(recipe) {
+    this.get('favoritesList').add(recipe);
+  },
+}
 });
