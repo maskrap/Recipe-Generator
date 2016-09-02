@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  favoritesList: Ember.inject.service('favorites-list'),
   model: function(params) {
     return this.store.findRecord('recipe', params.recipe_id);
   },
-  favoritesList: Ember.inject.service(),
   actions: {
     remove(recipe) {
       this.get('favoritesList').remove(recipe);
@@ -14,6 +14,7 @@ export default Ember.Route.extend({
     },
     addToFav(recipe) {
       this.get('favoritesList').add(recipe);
+      console.log(this.get('favoritesList'));
     },
     saveComment(params) {
       var newComment = this.store.createRecord('comment', params);
