@@ -6,6 +6,11 @@ export default Ember.Component.extend({
     var key = config.myApiKey;
     var that = this;
     var ingredient = this.get('ingredient').toLowerCase();
+    ingredient = ingredient.replace(/\d/g, '').replace(/\(([^\)]+)\)/ig, '').split(' ');
+    if (ingredient.length !== 1) {
+      ingredient.shift();
+      ingredient.shift();
+    }
     var url = 'http://www.supermarketapi.com/api.asmx/COMMERCIAL_SearchByProductName?APIKEY=' + key + '&ItemName=' + ingredient;
     if (ingredient) {
       return Ember.$.get(url).then(function(responseJSON) {
@@ -14,7 +19,9 @@ export default Ember.Component.extend({
         for (var i = 0; i < prices.length; i ++) {
           var price = prices[i].childNodes[0].nodeValue;
           if (price !== 'NOPRICE') {
-            priceArray.push(parseFloat(price).toFixed(2));
+            if (price !== '0.00') {
+              priceArray.push(parseFloat(price).toFixed(2));
+            }
           }
         }
         priceArray.sort(function(a, b) {
