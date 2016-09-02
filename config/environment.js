@@ -4,6 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'recipe-generator',
     environment: environment,
+    contentSecurityPolicy: {
+      'connect-src' : "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

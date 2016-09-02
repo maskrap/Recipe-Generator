@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   ingredientResult: Ember.computed('ingredient', function() {
     var key = config.myApiKey;
     var that = this;
-    var ingredient = this.get('ingredient').toLowerCase()
+    var ingredient = this.get('ingredient').toLowerCase();
     var url = 'http://www.supermarketapi.com/api.asmx/COMMERCIAL_SearchByProductName?APIKEY=' + key + '&ItemName=' + ingredient;
     if (ingredient) {
       return Ember.$.get(url).then(function(responseJSON) {
@@ -19,7 +19,7 @@ export default Ember.Component.extend({
           return a-b;
         });
         that.set('ingredientResult', parseFloat(priceArray[0]).toFixed(2));
-      });  
+      });
     }
   })
 });
