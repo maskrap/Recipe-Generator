@@ -1,0 +1,6 @@
+<div class="recipe-results-recipes-tile">
+  {{#each favoritesList.recipes as |recipe|}}
+    {{recipe-tile recipe=recipe}}
+    <button {{action 'remove' recipe}}>Remove Recipe</button>
+  {{/each}}
+</div>
