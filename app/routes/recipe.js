@@ -14,7 +14,6 @@ export default Ember.Route.extend({
     },
     addToFav(recipe) {
       this.get('favoritesList').add(recipe);
-      console.log(this.get('favoritesList'));
     },
     saveComment(params) {
       var newComment = this.store.createRecord('comment', params);

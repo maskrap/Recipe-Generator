@@ -7,12 +7,8 @@ export default Ember.Service.extend({
     this.get('recipes').pushObject(recipe);
   },
 
-  remove(recipe) {
-    this.get('recipes').removeObject(recipe);
-  },
-
-  empty() {
-    this.get('recipes').clear();
-  },
-
+  remove(recipe, index) {
+    this.get('recipes').splice(index, 1);
+    return this.get('recipes');
+  }
 });

@@ -1,10 +1,10 @@
 <div class="recipe-results-recipes-tile">
-  {{#each favoritesList.recipes as |recipe|}}
+  {{#each favoritesList.recipes as |recipe index|}}
     <div class="recipe-results-recipes-tile-recipes">
       {{recipe-tile recipe=recipe}}
     </div>
     <div class="recipe-results-recipes-tile-button">
-      <button {{action 'remove' recipe}} class="remove-btn">Remove Recipe</button>
+      <button {{action 'remove' recipe index}} class="remove-btn">Remove Recipe</button>
     </div>
   {{/each}}
 </div>
