@@ -1,6 +1,18 @@
-<h3>Favorites List</h3>
-<button {{action 'empty'}}>Empty list</button>
-{{#each favoritesList.recipes as |recipe|}}
-  {{recipe-tile recipe=recipe}}
-  <button {{action 'remove' recipe}}>Remove Recipe</button>
-{{/each}}
+<div class="page-wrap">
+  <div class="header-nav">
+    <div class="header-nav-img">
+      {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+    </div>
+    <div class="header-nav-favs">
+      {{#link-to 'list'}}<h4>Favorites</h4>{{/link-to}}
+      {{#link-to 'admin'}}<h4>Admin</h4>{{/link-to}}
+    </div>
+  </div>
+  <div class="favorite-recipes">
+    <button {{action 'empty'}}>Empty list</button>
+    {{#each favoritesList.recipes as |recipe|}}
+    {{recipe-tile recipe=recipe}}
+    <button {{action 'remove' recipe}}>Remove Recipe</button>
+    {{/each}}
+  </div>
+</div>

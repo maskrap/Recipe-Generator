@@ -1,28 +1,22 @@
-<div class="page-wrap">
-  <div class="header-nav">
-    {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
-  </div>
-  <div class="recipe-detail-tile">
-    <div class="recipe-detail-tile-img-info">
-      <div class="recipe-detail-tile-img">
-        <img src={{recipe.image}} alt={{recipe.name}} class="admin-recipe"/>
-      </div>
-      <div class="information">
-        <h3>{{recipe.name}}</h3>
-        <h4><span class="recipe-item-type">cuisine:</span> {{recipe.cuisine}}</h4>
-        <h4><span class="recipe-item-type">temp:</span> {{recipe.dish}}</h4>
-        <h4><span class="recipe-item-type">time:</span> {{recipe.time}} <span class="recipe-item-type-count">minutes</span></h4>
-        <h4><span class="recipe-item-type">serves:</span> {{recipe.serves}} <span class="recipe-item-type-count">people</span></h4>
-        <h4><span class="recipe-item-type">wine pairing:</span> {{wine-pairing recipe=recipe}}</h4>
-        <h4><span class="recipe-item-type">ingredients:</span></h4>
-        <h4>
-          {{#each ingredients as |ingredient|}}
-          <span class="small-instructions">{{ingredient-list ingredient=ingredient}}</span>
-          {{/each}}
-        </h4>
-        <h4><span class="recipe-item-type">serves:</span> <span class="small-instructions">{{recipe.instructions}}</span></h4>
-      </div>
+<div class="recipe-detail-tile">
+  <div class="recipe-detail-tile-img-info">
+    <div class="recipe-detail-tile-img">
+      <img src={{recipe.image}} alt={{recipe.name}} class="admin-recipe"/>
     </div>
-    <button {{action 'addToFav' recipe}} class="favorites">Add to Favorites List</button>
+    <div class="information">
+      <h3>{{recipe.name}}</h3>
+      <h4><span class="recipe-item-type">cuisine:</span> {{recipe.cuisine}}</h4>
+      <h4><span class="recipe-item-type">temp:</span> {{recipe.dish}}</h4>
+      <h4><span class="recipe-item-type">time:</span> {{recipe.time}} <span class="recipe-item-type-count">minutes</span></h4>
+      <h4><span class="recipe-item-type">serves:</span> {{recipe.serves}} <span class="recipe-item-type-count">people</span></h4>
+      <h4><span class="recipe-item-type">ingredients:</span></h4>
+      <h4>
+        {{#each ingredients as |ingredient|}}
+        <span class="small-instructions">{{ingredient-list ingredient=ingredient}}</span>
+        {{/each}}
+      </h4>
+      <h4><span class="recipe-item-type">serves:</span> <span class="small-instructions">{{recipe.instructions}}</span></h4>
+    </div>
   </div>
+  <button {{action 'addToFav' recipe}} class="favorites">Add to Favorites List</button>
 </div>
