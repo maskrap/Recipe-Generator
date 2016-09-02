@@ -1,4 +1,6 @@
-<button {{action 'empty'}}>Empty list</button>
-{{#each favoritesList.recipes as |recipe|}}
+<div class="empty-list">  
+  <button {{action 'empty'}}>Empty list</button>
+  {{#each favoritesList.recipes as |recipe|}}
   <li>{{recipe.name}} -- {{recipe.cuisine}}</li><button {{action 'remove' recipe}}>Remove Recipe</button>
-{{/each}}
+  {{/each}}
+</div>

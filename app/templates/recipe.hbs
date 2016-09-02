@@ -1,13 +1,18 @@
-<div>
+<div class="page-wrap">
+  <div class="header-nav">
+    {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+  </div>
   {{recipe-detail recipe=model}}
-  {{display-list}}
-  <button {{action 'addToFav' recipe}}>Add to Favorites List</button>
-  <h3>Posted Comments:</h3>
+  <!-- {{display-list}} -->
+  <div class="comments-display">
+    <div class="comments-display-title">
+      <h3>Comments:</h3>
+    </div>
     <ul>
       {{#each model.comments as |comment|}}
-        <li>{{comment.rating}}<h4>{{comment.name}} : <span class="unbold">{{comment.comment}}</span></h4></li>
+        <li><h3>{{comment.rating}} <i class="fa fa-star" aria-hidden="true"></i>s</h3><h4><span class="unbold">AUTHOR:</span> {{comment.name}}</h4><h4><span class="unbold">COMMENT:</span> {{comment.comment}}</h4></li>
       {{/each}}
     </ul>
-    {{new-comment saveComment="saveComment" recipe=model}}
+  </div>
+  {{new-comment saveComment="saveComment" recipe=model}}
 </div>
-  
