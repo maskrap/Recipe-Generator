@@ -1,7 +1,6 @@
 <div>
   {{recipe-detail recipe=model}}
   {{display-list}}
-  <button {{action 'addToFav' recipe}}>Add to Favorites List</button>
   <h3>Posted Comments:</h3>
     <ul>
       {{#each model.comments as |comment|}}
