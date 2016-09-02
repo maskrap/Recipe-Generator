@@ -1,6 +1,12 @@
 <div class="page-wrap">
   <div class="header-nav">
-    {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+    <div class="header-nav-img">
+      {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+    </div>
+    <div class="header-nav-favs">
+      {{#link-to 'list'}}<h4>Favorites</h4>{{/link-to}}
+      {{#link-to 'admin'}}<h4>Admin</h4>{{/link-to}}
+    </div>
   </div>
   <div class="recipe-results">
     <div class="recipe-results-title-tile">

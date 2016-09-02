@@ -1,3 +1,15 @@
-{{recipe-tile items=model}}
-{{#link-to 'list'}}<h3>Favorites List</h3>{{/link-to}}
-{{display-cart}}
+<div class="page-wrap">
+  <div class="header-nav">
+    <div class="header-nav-img">
+      {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+    </div>
+    <div class="header-nav-favs">
+      {{#link-to 'list'}}<h4>Favorites</h4>{{/link-to}}
+      {{#link-to 'admin'}}<h4>Admin</h4>{{/link-to}}
+    </div>
+  </div>
+  <div class="favorite-recipes">
+    {{recipe-tile items=model}}
+    {{display-cart}}
+  </div>
+</div>

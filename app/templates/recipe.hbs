@@ -1,12 +1,18 @@
 <div class="page-wrap">
   <div class="header-nav">
-    {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+    <div class="header-nav-img">
+      {{#link-to 'index'}}<img src="/img/logo-clock.png" alt="Logo" class="logo-img"/>{{/link-to}}
+    </div>
+    <div class="header-nav-favs">
+      {{#link-to 'list'}}<h4>Favorites</h4>{{/link-to}}
+      {{#link-to 'admin'}}<h4>Admin</h4>{{/link-to}}
+    </div>
   </div>
   {{recipe-detail recipe=model}}
   <!-- {{display-list}} -->
   <div class="comments-display">
     <div class="comments-display-title">
-      <h3>Comments:</h3>
+      <h3>Comments</h3>
     </div>
     <ul>
       {{#each model.comments as |comment|}}
